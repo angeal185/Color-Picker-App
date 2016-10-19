@@ -1,0 +1,44 @@
+doctype html
+html
+ head
+  title Color Picker App
+  link(href='stylesheets/site.css', media='screen', rel='stylesheet', type='text/css')
+ body
+  header
+   h1 Color Picker App
+  #hslpicker
+   .frame
+    #tiles.color-tiles
+     .foreground.tile.selected(data-name='foreground', title='Adjust foreground tile')
+      .foreground-color.tile
+     .background.tile(data-name='background', title='Adjust background tile')
+      .background-color.tile
+     #special-buttons.bgs
+      .bg.none(title='Transparent', data-color='[360,100,100,0]')
+      .bg.light(title='White', data-color='[360,100,100,1]')
+      .bg.dark(title='Black', data-color='[0,0,0,1]')
+      .bg.random(title='Random', data-color='random')
+     .expose(title='show/hide background tile')
+    #picker.sliders
+     .slider
+      #h-slider
+       .handle
+     input#h
+     .slider
+      #s-slider
+       .handle
+     input#s
+     .slider
+      #l-slider
+       .handle
+     input#l
+     .slider
+      #a-slider
+       .handle
+     input#a
+   .color-inputs
+    input#hex(spellcheck='false', type='text')
+    input#rgba(spellcheck='false', type='text')
+    input#hsla(spellcheck='false', type='text')
+ script(src='javascripts/jquery.min.js')
+ script(src='javascripts/color.js', type='text/javascript')

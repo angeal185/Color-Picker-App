@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color Picker App</title>
+    <link href="stylesheets/site.css" media="screen" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header>
+      <h1>Color Picker App</h1>
+    </header>
+    <div id="hslpicker">
+      <div class="frame">
+        <div id='tiles' class='color-tiles'>
+          <div class='foreground tile selected' data-name='foreground' title='Adjust foreground tile'>
+            <div class='foreground-color tile'></div>
+          </div>
+          <div class='background tile' data-name='background' title='Adjust background tile'>
+            <div class='background-color tile'></div>
+          </div>
+          <div class='bgs' id="special-buttons">
+            <div class='bg none' title='Transparent' data-color='[360,100,100,0]'></div>
+            <div class='bg light' title='White' data-color='[360,100,100,1]'></div>
+            <div class='bg dark' title='Black' data-color='[0,0,0,1]'></div>
+            <div class='bg random' title='Random' data-color='random'></div>
+          </div>
+          <div class='expose' title='show/hide background tile'></div>
+        </div>
+        <div id='picker' class='sliders'>
+          <div class="slider"><div id='h-slider'><div class='handle'></div></div></div> <input id='h'>
+          <div class="slider"><div id='s-slider'><div class='handle'></div></div></div> <input id='s'>
+          <div class="slider"><div id='l-slider'><div class='handle'></div></div></div> <input id='l'>
+          <div class="slider"><div id='a-slider'><div class='handle'></div></div></div> <input id='a'>
+        </div>
+      </div>
+      <div class='color-inputs'>
+        <input id="hex" spellcheck="false" type="text">
+        <input id="rgba" spellcheck="false" type="text">
+        <input id="hsla" spellcheck="false" type="text">
+      </div>
+    </div>
+  </body>
+  <script src="javascripts/jquery.min.js"></script>
+  <script src="javascripts/color.js" type="text/javascript"></script>
+</html>
+
